@@ -9,6 +9,7 @@
   justify-items: center;
   padding: 2rem;
   perspective: 1300px;
+  background-color: #e7fcff;
 }
 
 #die-list {
