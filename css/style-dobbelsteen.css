@@ -1,18 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-}
 
-body {
-  background: white;
-  display: grid;
-  grid-template-columns: 1fr;
-  height: 100vh;
-  overflow: hidden;
-  width: 100%;
-  text-align: center;
-}
 
 .dice {
   align-items: center;
