@@ -1,0 +1,57 @@
+html {
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
+  grid-template-rows: 10vw 10vw 10vw 10vw;
+  grid-gap: 1vw;
+  position: absolute;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #000000;
+  padding-top: 3.7vw;
+  font-size: 2vw;
+  text-align: center;
+}
+
+#contentContainer {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #e7fcff;
+  cursor: pointer;
+}
+
+#pion {
+  width: 5vw;
+  height: 6vw;
+
+  transform: translate3d(2vw, 2vw, 0);
+  transition: transform .3s ease-in;
+}
+
+.pion-image {
+  width: 100%;
+  height: 100%;
+}
+
+.orange {
+  background-color: #f27405;
+}
+
+.blue {
+  background-color: #32adbd;
+}
+
+.null {
+  background-color: #e7fcff;
+}

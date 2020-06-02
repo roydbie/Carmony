@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+
+  <title>Proftaak semester 4</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+
+  <div id="contentContainer">
+    <div class="grid-container">
+      <div class="grid-item null">1</div>
+      <div class="grid-item orange">2</div>
+      <div class="grid-item blue">3</div>
+      <div class="grid-item orange">4</div>
+      <div class="grid-item orange">5</div>
+      <div class="grid-item blue">6</div>
+      <div class="grid-item null">7</div>
+      <div class="grid-item orange">8</div>
+      <div class="grid-item orange">9</div>
+      <div class="grid-item null">10</div>
+      <div class="grid-item null">11</div>
+      <div class="grid-item blue">12</div>
+      <div class="grid-item orange">13</div>
+      <div class="grid-item null">14</div>
+      <div class="grid-item orange">15</div>
+      <div class="grid-item blue">16</div>
+      <div class="grid-item orange">17</div>
+      <div class="grid-item null">18</div>
+      <div class="grid-item blue">19</div>
+      <div class="grid-item orange">20</div>
+      <div class="grid-item orange">21</div>
+      <div class="grid-item null">22</div>
+      <div class="grid-item blue">23</div>
+      <div class="grid-item blue">24</div>
+      <div class="grid-item orange">25</div>
+      <div class="grid-item null">26</div>
+      <div class="grid-item null">27</div>
+      <div class="grid-item blue">28</div>
+      <div class="grid-item orange">29</div>
+      <div class="grid-item blue">30</div>
+    </div>
+
+    <div id="pion">
+      <img src="img/gans.png" alt="not found" class="pion-image">
+    </div>
+
+    <p id="xcoord" style="margin-top:65vh;margin-left:50vw;">X coordinaten:</p>
+    <p id="ycoord" style="margin-left:50vw;">Y coordinaten:</p>
+    <p id="vakje" style="margin-left:50vw;">Vakje:</p>
+
+  </div>
+
+  <script>
+    var pion = document.querySelector("#pion");
+    var container = document.querySelector("#contentContainer");
+    var xcoord = document.getElementById("xcoord");
+    var ycoord = document.getElementById("ycoord");
+    var vakje = document.getElementById("vakje");
+
+    container.addEventListener("click", getClickPosition, false);
+
+    function getClickPosition(e) {
+      var xPosition = e.clientX - ((pion.offsetWidth) / 2);
+      var yPosition = e.clientY - ((pion.offsetHeight + 40) / 2);
+
+      var translate3dValue = "translate3d(" + xPosition + "px, " + yPosition + "px, 0)";
+      pion.style.transform = translate3dValue;
+
+      if (xPosition > 45 & xPosition < 210 & yPosition > 15 & yPosition < 180) {
+        numbvakje = 1;
+      } else {
+        numbvakje = 2;
+      }
+
+      vwcall = (xPosition / window.innerWidth * 100)
+      vhcall = (yPosition / window.innerHeight * 100)
+
+      xcoord.innerHTML = "X coordinaten: " + vwcall;
+      ycoord.innerHTML = "Y coordinaten: " + vhcall;
+      vakje.innerHTML = "Vakje: " + numbvakje;
+
+
+
+    }
+
+  </script>
+
+
+</body>
+</html>
