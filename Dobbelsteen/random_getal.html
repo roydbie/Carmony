@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Getal</title>
+
+  <style>
+    body {
+      text-align: center;
+      background-color: #E7FCFF;
+    }
+
+    .dobbelsteen {
+      background-color: #F27405;
+      margin: auto;
+      padding: 100px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    button {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dobbelsteen">
+    <h1 id="getal">#</h1>
+
+    <button onclick="getRandomNumber()">Klik hier om de dobbelsteen te gooien.</button>
+  </div>
+
+  <script>
+    function getRandomNumber() {
+      minimaal = Math.ceil(1);
+      maximaal = Math.floor(6);
+      randomGetal = Math.floor(Math.random() * (maximaal - minimaal +1)) + minimaal;
+      document.getElementById("getal").innerHTML = randomGetal;
+    }
+  </script>
+
+</body>
+</html>
