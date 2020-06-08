@@ -72,13 +72,15 @@ function getClickPosition(e) {
     numbvakje = 26;
   } else if (vwcall > 85.5 & vwcall < 95.4 & vhcall > 35.7 & vhcall < 56) {
     numbvakje = 27;
-  } else
+  } else {
+
+  }
 
 
 
-  xcoord.innerHTML = "X coordinaten: " + vwcall;
-  ycoord.innerHTML = "Y coordinaten: " + vhcall;
-  vakje.innerHTML = "Vakje: " + numbvakje;
+  xcoord.innerHTML = "vw: " + vwcall;
+  ycoord.innerHTML = "vh: " + vhcall;
+  vakje.innerHTML = "vakje: " + numbvakje;
 
   // Store
   localStorage.doelVakje = 5;
