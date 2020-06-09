@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import { Home } from './Home';
+import { Home } from './components/Home';
 import { Contact } from './Contact';
 import { Uitleg } from './Uitleg';
 import { NoMatch } from './NoMatch';

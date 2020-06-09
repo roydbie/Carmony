@@ -1,0 +1,23 @@
+.button-bg {
+    background-color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 2rem;
+}
+
+.icon {
+    width: 3rem;
+    padding-right: 1rem;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    background-color: turquoise;
+}
