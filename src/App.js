@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { Home } from './Home';
 import { Contact } from './Contact';
@@ -9,13 +9,14 @@ import { SpelPagina} from './SpelPagina';
 import { Login } from './Login';
 import { Layout } from './components/Layout';
 import { NavigationBar } from './components/NavigationBar';
+import history from './history';
 
 function App() {
   return (
     <React.Fragment>
       <NavigationBar />
       <Layout>
-      <Router>
+      <Router history={history}>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/contact" component={Contact} />
