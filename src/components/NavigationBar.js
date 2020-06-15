@@ -4,6 +4,7 @@ import { FaHome } from "react-icons/fa";
 import { FaSignInAlt } from "react-icons/fa";
 import { FaInfo } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
+import { FaPen } from "react-icons/fa";
 
 const Styles = styled.div`
 body {
@@ -66,9 +67,14 @@ export const NavigationBar = () => (
         <span class="nav__text">Uitleg</span>
       </a>
 
-      <a href="/" class="nav__link">
+      <a href="/contact" class="nav__link">
         <i class="material-icons nav__icon"><FaPhone size="2rem"/></i>
         <span class="nav__text">Contact</span>
+      </a>
+
+      <a href="" class="nav__link">
+        <i class="material-icons nav__icon"><FaPen size="2rem"/></i>
+        <span class="nav__text">Uiterlijk</span>
       </a>
 
     </nav>
