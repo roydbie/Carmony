@@ -1,4 +1,5 @@
 // vanaf hier komt de code voor de pion gemaakt door Roy
+document.getElementById("totaalvakje").innerHTML = "totaal vakjes: " + localStorage.doelVakje;
 
 var pion = document.querySelector("#pion");
 var container = document.querySelector("#contentContainer");
@@ -82,17 +83,25 @@ function getClickPosition(e) {
   ycoord.innerHTML = "vh: " + vhcall;
   vakje.innerHTML = "vakje: " + numbvakje;
 
-  // Store
-  localStorage.doelVakje = 5;
   // Retrieve
   if (localStorage.doelVakje == numbvakje) {
     setTimeout(function(){ alert("Je staat op het juiste vakje."); }, 500);
   }
 }
 
+function randomGetal() {
+  var x = Math.floor((Math.random() * 6) + 1);
+  document.getElementById("getal").innerHTML = x;
+
+  localStorage.doelVakje = Number(localStorage.doelVakje) + x;
+  document.getElementById("totaalvakje").innerHTML = "totaal vakjes: " + localStorage.doelVakje;
+}
 
 
 
+function resetGetal() {
+  localStorage.doelVakje = 0;
+}
 
 
 
