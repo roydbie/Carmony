@@ -1,9 +1,15 @@
 .button-bg {
-    background-color: white;
+    background-color: #32ADBD;
     border: none;
     padding: 1rem;
     border-radius: 8px;
     margin: 2rem;
+    color: white;
+}
+
+.button-bg:hover {
+    background-color: white;
+    color: #F27405;
 }
 
 .icon {
@@ -20,4 +26,16 @@
 
 .background {
     background-color: turquoise;
+}
+
+.MuteIcon {
+    width: 32px;
+    height: 32px;
+    padding-right: 6px;
+}
+
+.MuteOff {
+    width: 32px;
+    height: 32px;
+    padding-right: 6px;
 }
