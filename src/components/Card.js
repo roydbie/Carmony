@@ -7,6 +7,8 @@ function Card (props) {
 
     e.dataTransfer.setData('card_id', target.id);
 
+    console.log(target.id);
+
     setTimeout(() => {
       target.style.display = "none";
 

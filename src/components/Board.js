@@ -1,5 +1,9 @@
 import React from 'react'
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 function Board (props) {
 const drop = e => {
   e.preventDefault();
@@ -7,6 +11,12 @@ const drop = e => {
 
   const card = document.getElementById(card_id);
   card.style.display = 'block';
+  var divnum = 3;
+  var divstring = '' + divnum;
+  if (props.id === divstring) {
+    console.log(getRandomInt(3));
+    console.log('het nummer hierboven was een test.');
+  }
 
   e.target.appendChild(card);
 
