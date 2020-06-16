@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { Home } from './components/Home';
 import { Contact } from './Contact';
@@ -9,7 +9,11 @@ import { SpelPagina} from './SpelPagina';
 import { Login } from './Login';
 import { Layout } from './components/Layout';
 import { NavigationBar } from './components/NavigationBar';
+<<<<<<< HEAD
 import {Audio} from './components/Audio'
+=======
+import history from './history';
+>>>>>>> bootstrapopzet
 
 function App() {
   return (
@@ -20,6 +24,10 @@ function App() {
       </div>
       <NavigationBar />
       <Layout>
+<<<<<<< HEAD
+=======
+      <Router history={history}>
+>>>>>>> bootstrapopzet
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/contact" component={Contact} />

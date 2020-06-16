@@ -33,7 +33,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
   font-family: Segoe UI;
-  font-size: 13px;
+  font-size: 22px;
   color: #FFFFFF;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
