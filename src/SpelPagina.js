@@ -14,12 +14,13 @@ function getRandomInt(max) {
 }
 
 
-
 function DicePopup() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  var randomInt = getRandomInt(6);
 
   return (
     <>
@@ -31,7 +32,9 @@ function DicePopup() {
         <Modal.Header closeButton>
           <Modal.Title>Je hebt de dobbelsteen gegooid!</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{getRandomInt(6)}</Modal.Body>
+        <Modal.Body>
+          {randomInt}
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={handleClose}>
             Oké
