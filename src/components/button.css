@@ -74,16 +74,64 @@
     color: var(--danger);
   }
 
+  .btn--icon--outline:hover {
+    background-color: transparent;
+    box-shadow: 0 0 0px transparent;
+    color: #ffba7e;
+  }
+
+  .btn--makkelijk--solid {
+    background-color: rgb(60, 165, 60);
+    color: white;
+    border: none;
+  }
+
+  .btn--gemiddeld--solid {
+    background-color: rgb(228, 228, 89);
+    color: rgb(26, 26, 26);
+    border: none;
+  }
+
+  .btn--moeilijk--solid {
+    background-color: rgb(216, 64, 64);
+    color: white;
+    border: none;
+  }
+
+  .btn--moeilijk--solid:hover {
+    background-color: rgb(218, 109, 109);
+    color: white;
+    border: none;
+  }
+
+  .btn--gemiddeld--solid:hover {
+    background-color: rgb(226, 226, 118);
+    color: rgb(26, 26, 26);
+    border: none;
+  }
+
+  .btn--makkelijk--solid:hover {
+    background-color: rgb(137, 212, 137);
+    color: white;
+    border: none;
+  }
+
+
   
   /* Button Size */
   
-  .btn--medium {
+  .btn--small {
     padding: 10px 10px;
     font-size: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .btn--medium {
+    padding: 50px 50px;
+    font-size: 22px;
   }
   
   .btn--large {

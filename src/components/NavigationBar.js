@@ -33,6 +33,7 @@ body {
   white-space: nowrap;
   font-family: Segoe UI;
   font-size: 22px;
+  font-size: 100%;
   color: #FFFFFF;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
@@ -51,7 +52,8 @@ body {
 
 export const NavigationBar = () => (
   <Styles>
-    <nav class="nav">
+
+    <nav class="nav className="block-example border-right border-dark>
       <a href="/" class="nav__link">
         <i class="material-icons nav__icon"><FaHome size="2rem"/></i>
         <span class="nav__text">Home</span>

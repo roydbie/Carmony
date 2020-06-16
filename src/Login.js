@@ -9,7 +9,7 @@ export const Login = () => (
 
     <div className="App">
         <div style={{ position: "absolute", top: 0, left: 0 }}>
-            <Button onClick={() => { history.goBack() }} style="text-align: center;" type="button" buttonStyle="backbtn--icon--outline" buttonSize="btn--medium">
+            <Button onClick={() => { history.goBack() }} style="text-align: center;" type="button" buttonStyle="btn--icon--outline" buttonSize="btn--small">
                 <FaAngleLeft />
             </Button>
         </div>

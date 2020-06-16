@@ -8,6 +8,8 @@ import { NoMatch } from './NoMatch';
 import { SpelPagina} from './SpelPagina';
 import { Login } from './Login';
 import { Layout } from './components/Layout';
+import { SingleMulti } from './SingleMulti';
+import { Moeilijkheid } from './Moeilijkheid';
 import { NavigationBar } from './components/NavigationBar';
 import history from './history';
 
@@ -24,6 +26,8 @@ function App() {
           <Route path="/spelpagina" component={SpelPagina} />
           <Route path="/uitleg" component={Uitleg} />
           <Route path="/login" component={Login} />
+          <Route path="/singlemulti" component={SingleMulti} />
+          <Route path="/moeilijkheid" component={Moeilijkheid} />
           <Route component={NoMatch} />
 
         </Switch>
