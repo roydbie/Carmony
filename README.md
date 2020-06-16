@@ -1,14 +1,26 @@
 # Carmony
 
-Ontwikkel een dienst die ouderen helpt tegen cybercriminaliteit.
+> Ontwikkel een dienst die ouderen helpt tegen cybercriminaliteit.
 
 Wij zien bij verschillende opdrachtgevers de behoefte om iets te doen rondom het thema cybercriminaliteit. Door de digitalisering is een deel van de criminaliteit verplaatst van fysiek naar online. Denk daarbij aan identiteitsfraude, cyber bullying, oplichting, phishing, hacken en chantage. Met name ouderen lijken een grotere kans te hebben om in aanraking te komen met cybercriminaliteit. Bedenk een dienst die deze doelgroep helpt tegen cybercriminaliteit.
 
 
 ## Status
-Bezig
+```diff
+- Bezig
+```
 
 Geschatte einddatum: 26 juni 2020.
+
+## Development setup
+
+Alle componenten zijn geinstalleerd in het project zelf en het is niet van toepassing deze opnieuw te installeren.
+
+Het project gebruikt react bootstrap, deze kan geinstalleerd worden in de overkoepelende map door gebruik te maken van de volgende npm code.
+
+```sh
+npm install --save react-bootstrap@1.0.0-beta.6 bootstrap@4.3.1
+```
 
 ## Authors
 * Carmen Engelen
