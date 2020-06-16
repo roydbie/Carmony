@@ -8,10 +8,12 @@ import Col from 'react-bootstrap/Col'
 import {Button, Modal} from 'react-bootstrap'
 
 function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
+  var rand = Math.floor(Math.random() * Math.floor(max));
+  var newrand = rand + 1;
+  return newrand;
 }
 
-console.log(getRandomInt(3));
+
 
 function DicePopup() {
   const [show, setShow] = useState(false);
@@ -22,20 +24,17 @@ function DicePopup() {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+        Gooi de Dobbelsteen!
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Je hebt de dobbelsteen gegooid!</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>{getRandomInt(6)}</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
           <Button variant="primary" onClick={handleClose}>
-            Save Changes
+            Oké
           </Button>
         </Modal.Footer>
       </Modal>
