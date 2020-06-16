@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Board from './components/Board'
 import Card from './components/Card'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+
+import {Button, Modal} from 'react-bootstrap'
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -11,8 +13,39 @@ function getRandomInt(max) {
 
 console.log(getRandomInt(3));
 
+function DicePopup() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <>
+      <Button variant="primary" onClick={handleShow}>
+        Launch demo modal
+      </Button>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+}
 
 export const SpelPagina = () => (
+
+
   <div>
   <br/>
     <Container className="containerrr">
@@ -50,6 +83,8 @@ export const SpelPagina = () => (
         <Col className="colll orange"><Board id="6" className="board"><p>5</p></Board></Col>
       </Row>
     </Container>
+
+    <DicePopup />
 
   </div>
 
