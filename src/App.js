@@ -9,13 +9,17 @@ import { SpelPagina} from './SpelPagina';
 import { Login } from './Login';
 import { Layout } from './components/Layout';
 import { NavigationBar } from './components/NavigationBar';
+import {Audio} from './components/Audio'
 
 function App() {
   return (
     <React.Fragment>
+      <Router>
+      <div style={{width: '100%', display: 'flex', justifyContent: 'flex-end'}}>
+        <Audio/>
+      </div>
       <NavigationBar />
       <Layout>
-      <Router>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/contact" component={Contact} />
@@ -26,9 +30,8 @@ function App() {
           <Route component={NoMatch} />
 
         </Switch>
-      </Router>
       </Layout>
-
+      </Router>
     </React.Fragment>
   );
 }
