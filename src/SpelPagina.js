@@ -68,7 +68,7 @@ export const SpelPagina = () => (
       </Button>
   </div>
   <br/>
-    <Container className="containerrr">
+    <Container  className="containerrr">
       <Row className="rowww">
         <Col className="colll null"><Board id="24" className="board"><p>23</p></Board></Col>
         <Col className="colll blue"><Board id="23" className="board"><p>22</p></Board></Col>
