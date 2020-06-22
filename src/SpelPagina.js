@@ -48,7 +48,7 @@ function DicePopup() {
 export const SpelPagina = () => (
 
 
-  <div>
+  <div className="joejoe">
   <br/>
     <Container className="containerrr">
       <Row className="rowww">
@@ -84,9 +84,9 @@ export const SpelPagina = () => (
         <Col className="colll blue"><Board id="5" className="board"><p>4</p></Board></Col>
         <Col className="colll orange"><Board id="6" className="board"><p>5</p></Board></Col>
       </Row>
-    </Container>
+    </Container> <br/>
 
-    <DicePopup />
+    {/* whenClicked is a property not an event, per se. <DicePopup />*/}
 
   </div>
 
