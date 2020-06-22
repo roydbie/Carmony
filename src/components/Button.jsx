@@ -9,10 +9,14 @@ const STYLES = [
   "btn--primary--outline",
   "btn--warning--outline",
   "btn--danger--outline",
-  "btn--success--outline"
+  "btn--success--outline",
+  "btn--gemiddeld--solid",
+  "btn--makkelijk--solid",
+  "btn--moeilijk--solid",
+  "btn--icon--outline",
 ];
 
-const SIZES = ["btn--medium", "btn--large"];
+const SIZES = ["btn--medium", "btn--large", "btn--small"];
 
 export const Button = ({
   children,
