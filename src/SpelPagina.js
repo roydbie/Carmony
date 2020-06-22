@@ -5,7 +5,9 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import {Button, Modal} from 'react-bootstrap'
+import { Button } from "./components/Button";
+import { FaAngleLeft } from "react-icons/fa";
+import history from './history';
 
 function rollDice() {
   const dice = document.getElementById("die-list");
@@ -29,6 +31,12 @@ export const SpelPagina = () => (
 
 
   <div className="joejoe">
+
+  <div style={{ position: "absolute", top: 0, left: 0 }}>
+      <Button onClick={() => { history.goBack() }} type="button" buttonStyle="btn--icon--outline" buttonSize="btn--small">
+          <FaAngleLeft />
+      </Button>
+  </div>
   <br/>
     <Container className="containerrr">
       <Row className="rowww">
