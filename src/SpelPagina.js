@@ -4,16 +4,31 @@ import Card from './components/Card'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-
 import {Button, Modal} from 'react-bootstrap'
+import Quiz from 'react-quiz-component';
+import { quiz } from './quiz'; 
 
-function getRandomInt(max) {
-  var rand = Math.floor(Math.random() * Math.floor(max));
-  var newrand = rand + 1;
-  return newrand;
+import { FaAngleLeft } from "react-icons/fa";
+import history from './history';
+
+function rollDice() {
+  const dice = document.getElementById("die-list");
+  toggleClasses(dice);
+  dice.dataset.roll = getRandomNumber(1,6);
 }
 
+function toggleClasses(dice) {
+  dice.classList.toggle("odd-roll");
+  dice.classList.toggle("even-roll");
+  return <DicePopup />; 
+}
 
+function getRandomNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+  
+}
 
 function DicePopup() {
   const [show, setShow] = useState(false);
@@ -27,11 +42,11 @@ function DicePopup() {
         Gooi de Dobbelsteen!
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} size="lg" onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>U heeft uw computer geupdate! Ga .. stappen vooruit.</Modal.Title>
+          <Modal.Title>Je hebt de dobbelsteen gegooid!</Modal.Title>
         </Modal.Header>
-        <Modal.Body> Cybercriminelen ontwikkelen nieuwe technieken om hun criminele activiteiten uit te voeren daarom is het belangrijk om een goed en geupdate apparaat te hebben. Ook moet u goed letten op andere apparaten zoals een slimme thermostaat of draadloze printer, criminelen kunnen u via deze apparaten bereiken. Update daarom regelmatig uw apparaten. dobbelsteen={getRandomInt(6)}</Modal.Body>
+        <Modal.Body><Quiz quiz={quiz} /> </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={handleClose}>
             Oké
@@ -45,7 +60,13 @@ function DicePopup() {
 export const SpelPagina = () => (
 
 
-  <div>
+  <div className="joejoe">
+
+  <div style={{ position: "absolute", top: 0, left: 0 }}>
+      <Button onClick={() => { history.goBack() }} type="button" buttonStyle="btn--icon--outline" buttonSize="btn--small">
+          <FaAngleLeft />
+      </Button>
+  </div>
   <br/>
     <Container className="containerrr">
       <Row className="rowww">
@@ -81,9 +102,47 @@ export const SpelPagina = () => (
         <Col className="colll blue"><Board id="5" className="board"><p>4</p></Board></Col>
         <Col className="colll orange"><Board id="6" className="board"><p>5</p></Board></Col>
       </Row>
-    </Container>
+    </Container><br/>
 
-    <DicePopup />
+    <div className="dobbelsteen" onClick={rollDice}> 
+       <ol className="even-roll" id="die-list" data-roll="1">
+         <li className="die-item" data-side="1">
+           <span className="dot"></span>
+         </li>
+         <li className="die-item" data-side="2">
+           <span className="dot"></span>
+           <span className="dot"></span>
+         </li>
+         <li className="die-item" data-side="3">
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+         </li>
+         <li className="die-item" data-side="4">
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+         </li>
+         <li className="die-item" data-side="5">
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+         </li>
+         <li className="die-item" data-side="6">
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+         </li>
+       </ol>
+     </div>
+<DicePopup />
+    {/* whenClicked is a property not an event, per se. <DicePopup />*/}
 
   </div>
 

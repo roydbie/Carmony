@@ -10,6 +10,7 @@ const Styles = styled.div`
 body {
   margin: 0 0 55px 0;
 }
+
 .nav {
   position: fixed;
   bottom: 0;
@@ -20,6 +21,7 @@ body {
   display: flex;
   overflow-x: auto;
 }
+
 .nav__link {
   display: flex;
   flex-direction: column;
@@ -30,23 +32,28 @@ body {
   overflow: hidden;
   white-space: nowrap;
   font-family: Segoe UI;
-  font-size: 13px;
+  font-size: 22px;
+  font-size: 100%;
   color: #FFFFFF;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
+
 .nav__link:hover {
   background-color: #E7FCFF;
   color: #F27405;
 }
+
 .nav__icon {
   font-size: 18px;
 }
+
 }`;
 
 export const NavigationBar = () => (
   <Styles>
-    <nav class="nav">
+
+    <nav class="nav className="block-example border-right border-dark>
       <a href="/" class="nav__link">
         <i class="material-icons nav__icon"><FaHome size="2rem"/></i>
         <span class="nav__text">Home</span>
