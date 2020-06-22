@@ -4,6 +4,8 @@ import Card from './components/Card'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Quiz from 'react-quiz-component';
+import { quiz } from './quiz'; 
 
 import {Button, Modal} from 'react-bootstrap'
 
@@ -20,21 +22,25 @@ function DicePopup() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  
+  
 
   return (
     <>
+	<Quiz quiz={quiz} showInstantFeedback={true}/>
+	
       <Button variant="primary" onClick={handleShow}>
         Gooi de Dobbelsteen!
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>U heeft uw computer geupdate! Ga .. stappen vooruit.</Modal.Title>
+          <Modal.Title>U heeft vraag</Modal.Title>
         </Modal.Header>
-        <Modal.Body> Cybercriminelen ontwikkelen nieuwe technieken om hun criminele activiteiten uit te voeren daarom is het belangrijk om een goed en geupdate apparaat te hebben. Ook moet u goed letten op andere apparaten zoals een slimme thermostaat of draadloze printer, criminelen kunnen u via deze apparaten bereiken. Update daarom regelmatig uw apparaten. dobbelsteen={getRandomInt(6)}</Modal.Body>
+        <Modal.Body> <Quiz quiz={quiz} /*shuffle={true}*/showInstantFeedback={true} /> dobbelsteen={getRandomInt(6)}</Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={handleClose}>
-            Oké
+            Beantwoord
           </Button>
         </Modal.Footer>
       </Modal>
