@@ -53,20 +53,12 @@ body {
 
 export const NavigationBar = () => (
   <Styles>
-<<<<<<< HEAD
-    <nav className="nav">
-      <Link to='/' className="nav__link">
-        <i className="material-icons nav__icon"><FaHome size="2rem"/></i>
-        <span className="nav__text">Home</span>
-      </Link>
-=======
 
     <nav class="nav className="block-example border-right border-dark>
       <a href="/" class="nav__link">
         <i class="material-icons nav__icon"><FaHome size="2rem"/></i>
         <span class="nav__text">Home</span>
       </a>
->>>>>>> bootstrapopzet
 
       <Link to="/login" className="nav__link nav__link--active">
         <i className="material-icons nav__icon"><FaSignInAlt size="2rem"/></i>
