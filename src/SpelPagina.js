@@ -4,8 +4,10 @@ import Card from './components/Card'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import {Button, Modal} from 'react-bootstrap'
+import Quiz from 'react-quiz-component';
+import { quiz } from './quiz'; 
 
-import { Button } from "./components/Button";
 import { FaAngleLeft } from "react-icons/fa";
 import history from './history';
 
@@ -18,14 +20,42 @@ function rollDice() {
 function toggleClasses(dice) {
   dice.classList.toggle("odd-roll");
   dice.classList.toggle("even-roll");
+  return <DicePopup />; 
 }
 
 function getRandomNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
+  
 }
 
+function DicePopup() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <>
+      <Button variant="primary" onClick={handleShow}>
+        Gooi de Dobbelsteen!
+      </Button>
+
+      <Modal show={show} size="lg" onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Je hebt de dobbelsteen gegooid!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body><Quiz quiz={quiz} /> </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleClose}>
+            Oké
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+}
 
 export const SpelPagina = () => (
 
@@ -74,7 +104,7 @@ export const SpelPagina = () => (
       </Row>
     </Container><br/>
 
-     <div className="dobbelsteen" onClick={rollDice}>
+    <div className="dobbelsteen" onClick={rollDice}> 
        <ol className="even-roll" id="die-list" data-roll="1">
          <li className="die-item" data-side="1">
            <span className="dot"></span>
@@ -111,7 +141,7 @@ export const SpelPagina = () => (
          </li>
        </ol>
      </div>
-
+<DicePopup />
     {/* whenClicked is a property not an event, per se. <DicePopup />*/}
 
   </div>
