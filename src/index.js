@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+<<<<<<< HEAD
 import 'bootstrap/dist/css/bootstrap.css';
+=======
+
+>>>>>>> 832250a312e15dec3d89bfaa81ac476472247686
 ReactDOM.render(
   <React.StrictMode>
     <App />

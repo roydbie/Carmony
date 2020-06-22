@@ -5,7 +5,6 @@ import { FaSignInAlt } from "react-icons/fa";
 import { FaInfo } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
 import { FaPen } from "react-icons/fa";
-import {Link} from 'react-router-dom'
 
 const Styles = styled.div`
 body {
