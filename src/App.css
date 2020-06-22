@@ -108,3 +108,17 @@ body {
   align-items: center;
   height: 90vh;
 }
+
+@media only screen and (max-width: 1500px) {
+
+  .rowww {
+    height: 12vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .rowww {
+    height: 8vh;
+  }
+}
