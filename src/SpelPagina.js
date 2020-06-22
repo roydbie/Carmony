@@ -7,43 +7,23 @@ import Col from 'react-bootstrap/Col'
 
 import {Button, Modal} from 'react-bootstrap'
 
-function getRandomInt(max) {
-  var rand = Math.floor(Math.random() * Math.floor(max));
-  var newrand = rand + 1;
-  return newrand;
+function rollDice() {
+  const dice = document.getElementById("die-list");
+  toggleClasses(dice);
+  dice.dataset.roll = getRandomNumber(1,6);
 }
 
-
-function DicePopup() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  var randomInt = getRandomInt(6);
-
-  return (
-    <>
-      <Button variant="primary" onClick={handleShow}>
-        Gooi de Dobbelsteen!
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Je hebt de dobbelsteen gegooid!</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          {randomInt}
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
-            Oké
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
-  );
+function toggleClasses(dice) {
+  dice.classList.toggle("odd-roll");
+  dice.classList.toggle("even-roll");
 }
+
+function getRandomNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 
 export const SpelPagina = () => (
 
@@ -84,7 +64,45 @@ export const SpelPagina = () => (
         <Col className="colll blue"><Board id="5" className="board"><p>4</p></Board></Col>
         <Col className="colll orange"><Board id="6" className="board"><p>5</p></Board></Col>
       </Row>
-    </Container> <br/>
+    </Container><br/>
+
+     <div className="dobbelsteen" onClick={rollDice}>
+       <ol className="even-roll" id="die-list" data-roll="1">
+         <li className="die-item" data-side="1">
+           <span className="dot"></span>
+         </li>
+         <li className="die-item" data-side="2">
+           <span className="dot"></span>
+           <span className="dot"></span>
+         </li>
+         <li className="die-item" data-side="3">
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+         </li>
+         <li className="die-item" data-side="4">
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+         </li>
+         <li className="die-item" data-side="5">
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+         </li>
+         <li className="die-item" data-side="6">
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+           <span className="dot"></span>
+         </li>
+       </ol>
+     </div>
 
     {/* whenClicked is a property not an event, per se. <DicePopup />*/}
 
