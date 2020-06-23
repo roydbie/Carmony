@@ -1,0 +1,41 @@
+.button-bg {
+    background-color: #32ADBD;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: -4rem;
+    color: white;
+}
+
+.button-bg:hover {
+    background-color: white;
+    color: #F27405;
+}
+
+.icon {
+    width: 3rem;
+    padding-right: 1rem;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    background-color: turquoise;
+}
+
+.MuteIcon {
+    width: 32px;
+    height: 32px;
+    padding-right: 6px;
+}
+
+.MuteOff {
+    width: 32px;
+    height: 32px;
+    padding-right: 6px;
+}
