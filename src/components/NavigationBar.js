@@ -5,6 +5,7 @@ import { FaSignInAlt } from "react-icons/fa";
 import { FaInfo } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
 import { FaPen } from "react-icons/fa";
+import {Link} from 'react-router-dom';
 
 const Styles = styled.div`
 body {
@@ -59,25 +60,25 @@ export const NavigationBar = () => (
         <span class="nav__text">Home</span>
       </a>
 
-      <a href="/login" class="nav__link nav__link--active">
-        <i class="material-icons nav__icon"><FaSignInAlt size="2rem"/></i>
-        <span class="nav__text">Login</span>
-      </a>
+      <Link to="/login" className="nav__link nav__link--active">
+        <i className="material-icons nav__icon"><FaSignInAlt size="2rem"/></i>
+        <span className="nav__text">Login</span>
+      </Link>
 
-      <a href="/uitleg" class="nav__link">
-        <i class="material-icons nav__icon"><FaInfo size="2rem"/></i>
-        <span class="nav__text">Uitleg</span>
-      </a>
+      <Link to="/uitleg" className="nav__link">
+        <i className="material-icons nav__icon"><FaInfo size="2rem"/></i>
+        <span className="nav__text">Uitleg</span>
+      </Link>
 
-      <a href="/contact" class="nav__link">
-        <i class="material-icons nav__icon"><FaPhone size="2rem"/></i>
-        <span class="nav__text">Contact</span>
-      </a>
+      <Link to="/contact" className="nav__link">
+        <i className="material-icons nav__icon"><FaPhone size="2rem"/></i>
+        <span className="nav__text">Contact</span>
+      </Link>
 
-      <a href="" class="nav__link">
-        <i class="material-icons nav__icon"><FaPen size="2rem"/></i>
-        <span class="nav__text">Uiterlijk</span>
-      </a>
+      <Link to="/uiterlijk" className="nav__link">
+        <i className="material-icons nav__icon"><FaPen size="2rem"/></i>
+        <span className="nav__text">Uiterlijk</span>
+      </Link>
 
     </nav>
   </Styles>
