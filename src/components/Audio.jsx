@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect, Fragment } from 'react'
 import muziek from '../achtergrondmuziek.mp3'
 import './home.css';
+import mute from '../images/mute.png';
+import speaker from '../images/speaker.png';
 
 export const Audio = () => {
     const [isMuted, setIsMuted] = useState(false);
