@@ -290,6 +290,10 @@ grid-area: seven;
 grid-area: nine;
 }
 
+.rechts {
+	margin: auto;
+	padding-left: 20px;
+}
 
 
 @media only screen and (max-width: 1500px) {

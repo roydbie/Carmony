@@ -5,10 +5,10 @@ export const quiz =  {
 	"appLocale": {
     "landingHeaderText": "",
     "question": "vraag",
-    "startQuizBtn": "U heeft een vraag!",
+    "startQuizBtn": "Klik hier voor de vraag",
     "resultFilterAll": "All",
     "resultFilterCorrect": "Goed gedaan! Ga 2 stappen vooruit. ",
-    "resultFilterIncorrect": "U heeft het helaas fout ga 2 stappen naar achter.",
+    "resultFilterIncorrect": "U heeft het helaas fout, ga 2 stappen terug!",
     "nextQuestionBtn": "",
     "resultPageHeaderText": "You have completed the quiz. You got <correctIndexLength> out of <questionLength> questions."
   }, 
@@ -29,8 +29,8 @@ export const quiz =  {
       ],
       "correctAnswer": "3",
       "messageForCorrectAnswer": "Goed gedaan! Ga 2 stappen vooruit. ",
-      "messageForIncorrectAnswer": "U heeft het helaas fout ga 2 stappen naar achter.",
-      "explanation": "",
+      "explanation": "Cybercriminelen ontwikkelen nieuwe technieken om hun criminele activiteiten uit te voeren daarom is het belangrijk om een goed en geupdate apparaat te hebben. Ook moet u goed letten op andere apparaten zoals een slimme thermostaat of draadloze printer, criminelen kunnen u via deze apparaten bereiken. Update daarom regelmatig uw apparaten. ",
+      "messageForIncorrectAnswer": "U heeft het helaas fout, ga 2 stappen terug! ",
       "point": "120"
     },
     {
