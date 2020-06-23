@@ -1,5 +1,4 @@
-import React, {Fragment} from 'react';
-
+import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { Home } from './Home';
@@ -12,18 +11,14 @@ import { Layout } from './components/Layout';
 import { SingleMulti } from './SingleMulti';
 import { Moeilijkheid } from './Moeilijkheid';
 import { NavigationBar } from './components/NavigationBar';
-import {Audio} from './components/Audio'
 import history from './history';
 
 function App() {
   return (
-    <Fragment>
-      <Router history={history}>
-      <div style={{width: '100%', display: 'flex', justifyContent: 'flex-end'}}>
-        <Audio/>
-      </div>
+    <React.Fragment>
       <NavigationBar />
       <Layout>
+      <Router history={history}>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/contact" component={Contact} />
@@ -36,9 +31,10 @@ function App() {
           <Route component={NoMatch} />
 
         </Switch>
-      </Layout>
       </Router>
-    </Fragment>
+      </Layout>
+
+    </React.Fragment>
   );
 }
 
